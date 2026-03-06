@@ -1,0 +1,68 @@
+.header {
+  height: 40px;
+  margin: 32px 40px 28px 40px;
+  padding: 16px 8px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+}
+
+.header__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__title {
+  font-weight: 900;
+  font-style: Black;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.header__date-location {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  align-self: baseline;
+}
+
+.header__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__nav {
+  margin: 0;
+  list-style: none;
+}
+
+.header__add-clothes {
+  margin: 0 20px 0 0;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  border: none;
+  background-color: transparent;
+}
+
+.header__username {
+  margin: 0 12px 0 0;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+}
