@@ -25,7 +25,7 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
-  const [deleteCard, setDeleteCard] = useState(null);
+  const [cardToDelete, setCardToDelete] = useState(null);
 
   const handleCardClick = (card) => {
     setActiveModal("preview");
@@ -44,7 +44,7 @@ function App() {
     };
     addItem(newCardData)
       .then((returnItem) => {
-        setClothingItems([...clothingItems, returnItem]);
+        setClothingItems([returnItem, ...clothingItems]);
         resetForm();
         closeActiveModal();
       })
@@ -52,21 +52,21 @@ function App() {
   };
 
   const openConfirmationModal = (card) => {
-    setDeleteCard(card);
+    setCardToDelete(card);
     closeActiveModal();
     setIsConfirmModalOpen(true);
   };
 
   const handleCardDelete = () => {
-    deleteItem(deleteCard._id)
+    deleteItem(cardToDelete._id)
       .then(() => {
         setClothingItems(
           clothingItems.filter(
-            (clothingItem) => clothingItem._id !== deleteCard._id,
+            (clothingItem) => clothingItem._id !== cardToDelete._id,
           ),
         );
         setIsConfirmModalOpen(false);
-        setDeleteCard(null);
+        setCardToDelete(null);
       })
       .catch(console.error);
   };
@@ -123,6 +123,7 @@ function App() {
                   <Profile
                     clothingItems={clothingItems}
                     onCardClick={handleCardClick}
+                    onAddItemClick={handleAddClick}
                   />
                 }
               />
