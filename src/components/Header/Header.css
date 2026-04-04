@@ -66,3 +66,24 @@
   width: 40px;
   height: 40px;
 }
+
+.header__logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__profile-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__logo-link:hover {
+  opacity: 0.8;
+}
+
+.header__profile-link:hover {
+  opacity: 0.8;
+}

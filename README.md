@@ -20,3 +20,8 @@ Currently, two official plugins are available:
 # Link to deployed url
 
 = url: "https://Ultra-Coder5927.github.io/se_project_react"
+
+## Project Pitch Video
+
+Check out my project 11 video here (https://www.loom.com/share/87a5f81159d64c3d8437043b9bd38d97), where I describe my
+react project as well as some challenges I faced while building it
